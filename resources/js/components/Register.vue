@@ -4,49 +4,49 @@
             <h2 class="text-2xl font-bold mb-6 text-center">Register</h2>
             <form @submit.prevent="handleRegister">
                 <div class="mb-4">
-                    <label class="block text-gray-700 mb-2" for="first_name"
-                        >First Name</label
+                    <label class="block text-gray-700 mb-2" for="name"
+                        >Name</label
                     >
                     <input
                         type="text"
-                        id="first_name"
-                        v-model="first_name"
+                        id="name"
+                        v-model="name"
                         class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
                     />
                 </div>
                 <div class="mb-4">
-                    <label class="block text-gray-700 mb-2" for="last_name"
-                        >Last Name</label
+                    <label class="block text-gray-700 mb-2" for="address"
+                        >Address</label
                     >
                     <input
                         type="text"
-                        id="last_name"
-                        v-model="last_name"
+                        id="address"
+                        v-model="address"
                         class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
                     />
                 </div>
                 <div class="mb-4">
-                    <label class="block text-gray-700 mb-2" for="email"
-                        >Email</label
+                    <label class="block text-gray-700 mb-2" for="phone_number"
+                        >Phone Number</label
                     >
                     <input
-                        type="email"
-                        id="email"
-                        v-model="email"
+                        type="number"
+                        id="phone_number"
+                        v-model="phone_number"
                         class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
                     />
                 </div>
-                <div class="mb-6">
-                    <label class="block text-gray-700 mb-2" for="password"
-                        >Password</label
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2" for="sim_number"
+                        >SIM Number</label
                     >
                     <input
-                        type="password"
-                        id="password"
-                        v-model="password"
+                        type="number"
+                        id="sim_number"
+                        v-model="sim_number"
                         class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
                     />
@@ -66,19 +66,19 @@
 export default {
     data() {
         return {
-            first_name: "",
-            last_name: "",
-            email: "",
-            password: "",
+            name: "",
+            address: "",
+            phone_number: "",
+            sim_number: "",
         };
     },
     methods: {
         handleRegister() {
             // Lakukan proses register, misalnya panggil API
-            console.log("First Name:", this.first_name);
-            console.log("Last Name:", this.last_name);
-            console.log("Email:", this.email);
-            console.log("Password:", this.password);
+            console.log("Name:", this.name);
+            console.log("Address:", this.address);
+            console.log("Phone Number:", this.phone_number);
+            console.log("SIM Number:", this.sim_number);
         },
     },
 };

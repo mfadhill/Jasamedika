@@ -1,7 +1,7 @@
 import "../css/app.css";
-import App from "./App.vue";
 import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
+import App from "./App.vue";
 import Login from "./components/Login.vue";
 import Register from "./components/Register.vue";
 
